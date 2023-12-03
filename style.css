@@ -1,20 +1,85 @@
-#app {
-    display: flex;
-    gap: 15px;
-}
-.music-container {
-    box-shadow: 1px 1px 2px #333;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    cursor: pointer;
-    color: white;
-    user-select: none;
+@font-face {
+    font-family: "Roboto";
+    src:
+      local("Trickster"),
+      url("./static/Roboto/Roboto-Regular.ttf"),
+      url("./static/Roboto/Roboto-Italic.ttf"),
+      url("./static/Roboto/Roboto-Bold.ttf"),
+      url("./static/Roboto/Roboto-BoldItalic.ttf");
+  }
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
 }
 
-.music-container:hover {
+body {
+    height: 100vh;
+    display: flex;
+    background-color: #909F8E;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#app {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    gap: 35px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-back {
+    color: transparent;
+}
+
+.music-container {
+    box-shadow: 1px 1px 3px 2px #333;
+    border-radius: 8px;
+    background-image: url("./static/back.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 20px;
+    cursor: pointer;
+    background-color: white;
+    user-select: none;
+    max-width: 60px;
+    max-height: 160px;
+    min-width: 60px;
+    min-height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+}
+
+.card-turn {
+   animation: turn 1s forwards;
+}
+
+@keyframes turn {
+40% {
+    transform: rotateY(90deg);
+}
+
+100% {
+    transform: rotateY(0deg);
+    background-image: url("./static/front.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
 }
 
 .music-text {
+    text-align: center;
+}
+
+h1 {
+    box-sizing: border-box;
+    padding: 30px;
+    font-weight: bold;
+    font-size: 70px;
+    color: rgb(62, 33, 2);
 }
