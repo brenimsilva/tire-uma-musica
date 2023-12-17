@@ -83,3 +83,29 @@ h1 {
     font-size: 70px;
     color: rgb(62, 33, 2);
 }
+
+#btn-reset {
+    padding: 10px;
+    text-align: center;
+    border: none;
+    box-shadow: 1px 2px 3px black;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#btn-reset:active {
+    background-color: #333;
+}
+
+#btn-reset:hover {
+    background-color: gray;
+}
+
+#level-select {
+    padding: 5px;
+}
+
+.menu-container {
+    display: flex;
+    gap: 15px;
+}
